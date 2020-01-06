@@ -1,7 +1,12 @@
 'use strict';
 
-function get_letter_interval_2(number_a, number_b) {
-  //在这里写入代码
+let get_integer_interval = require('./get_integer_interval.js')
+let number_map_to_word_over_26 = require('../map/number_map_to_word_over_26.js')
+
+let get_letter_interval_2 = (number_a, number_b) => {
+  let number = get_integer_interval(number_a, number_b);
+  let char = number_map_to_word_over_26(number);
+  return char;
 }
 
 module.exports = get_letter_interval_2;
